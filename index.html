@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Transferencia de Conocimiento</title>
+  </head>
+  <body>
+    <div class="Transfer">
+      <video autoplay playsinline muted id="webcam" class="Transfer__video" width="300" height="450"></video>
+      <div id="result" class="Transfer__result"></div>
+      <div class="Transfer__add-buttons">
+        <button onclick="addExample(1)">Id</button>
+        <button onclick="addExample(2)">Not Id</button>
+      </div>
+      <div class="Transfer__config-buttons">
+        <button id="saveClassifier"  onclick="saveClassifier()">Save config</button>
+        <button id="loadClassifier" onclick="loadClassifier()">Load config</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
